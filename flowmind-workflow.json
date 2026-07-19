@@ -1,0 +1,111 @@
+{
+  "name": "FlowMind AI Workflow",
+  "nodes": [
+    {
+      "id": "eedd50af-f932-44a4-bd86-58524af4a62a",
+      "name": "Gmail",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 1,
+      "position": [
+        180,
+        80
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "e328c13b-3d61-48ed-8cd5-9340fe90c2eb",
+      "name": "PDF",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        180,
+        250
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "451fbcbf-b1ae-47d9-a96e-32be3b6556c0",
+      "name": "Claude",
+      "type": "n8n-nodes-base.anthropic",
+      "typeVersion": 1,
+      "position": [
+        180,
+        420
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "0ec1fba2-c058-4f4e-b6f7-4247ee4dda48",
+      "name": "MySQL",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 1,
+      "position": [
+        180,
+        590
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "9082ba02-020d-4457-a889-e621329fcdfa",
+      "name": "WhatsApp",
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1,
+      "position": [
+        180,
+        760
+      ],
+      "parameters": {}
+    }
+  ],
+  "connections": {
+    "Gmail": {
+      "main": [
+        [
+          {
+            "node": "PDF",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "PDF": {
+      "main": [
+        [
+          {
+            "node": "Claude",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Claude": {
+      "main": [
+        [
+          {
+            "node": "MySQL",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MySQL": {
+      "main": [
+        [
+          {
+            "node": "WhatsApp",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": ""
+}
