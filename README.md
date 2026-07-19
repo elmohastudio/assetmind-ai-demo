@@ -19,7 +19,7 @@ AI-powered assistant designed to help organizations manage assets more efficient
 This project demonstrates how AI can transform complex administrative processes into simple conversational experiences. Currently expanding into a broader platform with an AI SQL Assistant and n8n-based workflow automation modules.
 
 ## Related Work
-See a live demo walkthrough here: [link ke postingan LinkedIn Anda]
+See a live demo walkthrough here: https://www.linkedin.com/feed/update/urn:li:activity:7481908403779362816
 
 ---
 Built by Lalan Hasibuan — AI Automation Engineer
